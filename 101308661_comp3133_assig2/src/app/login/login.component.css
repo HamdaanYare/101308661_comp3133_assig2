@@ -1,0 +1,57 @@
+.gradient-custom {
+    background-color: #fbfbfb;
+    background-image: linear-gradient(315deg, #fbfbfb 0%, #ebebeb 74%);
+  }
+  
+  .form-outline {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-outline input {
+    font-size: 1.5rem;
+    padding: 1.5rem 0.5rem;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid #333;
+    outline: none;
+    background-color: transparent;
+    box-shadow: none;
+    transition: all 0.3s ease-out;
+  }
+  
+  .form-outline input:focus {
+    border-bottom: 2px solid #007bff;
+  }
+  
+  .form-outline input:focus ~ .form-label {
+    color: #007bff;
+    font-size: 0.75rem;
+    top: 0;
+    left: 0;
+  }
+  
+  .form-label {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    transform-origin: 0 0;
+    transition: all 0.3s ease-out;
+  }
+  
+  .btn-outline-dark {
+    color: #343a40;
+    background-color: transparent;
+    background-image: none;
+    border-color: #343a40;
+  }
+  
+  .btn-outline-dark:hover {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+  }
+  
