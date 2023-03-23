@@ -11,21 +11,21 @@
               <!-- [(ngModel)]="firstName" -->
 
               <div class="form-outline form-black mb-4">
-                <input type="name" id="typeEmailX"  class="form-control form-control-lg" required/>
-                <label class="form-label" for="typeEmailX">First Name</label>
+                <input type="name" id="typeEmailX" [ngClass]="firstName"  class="form-control form-control-lg" required/>
+                <label class="form-label" for="typeT">First Name</label>
               </div>
               <div class="form-outline form-black mb-4">
-                  <input type="name" id="typeEmailX"  class="form-control form-control-lg" required/>
-                  <label class="form-label" for="typeEmailX">Last Name</label>
+                  <input type="name" id="typeEmailX" [ngClass]="lastName"  class="form-control form-control-lg" required/>
+                  <label class="form-label" for="typeT">Last Name</label>
                 </div>
               
                 <div class="form-outline form-black mb-4">
                   <input type="email" id="typeEmailX"  class="form-control form-control-lg" required/>
-                  <label class="form-label" for="typeEmailX">Email</label>
+                  <label [ngClass]="email" class="form-label" for="typeT">Email</label>
                 </div>
               <div class="form-outline form-black mb-4">
                 <input type="password" id="typePasswordX"  class="form-control form-control-lg" required/>
-                <label class="form-label" for="typeEmailX">Password</label>
+                <label ngClass="password" class="form-label" for="typeT">Password</label>
               </div>
 
               <p class="small mb-5 pb-lg-2"><a class="text-black-50" href="#!">Forgot password?</a></p>
