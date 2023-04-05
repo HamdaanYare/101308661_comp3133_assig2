@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = '101308661_comp3133_assig2';
+  public urlPath: string;
+  constructor(private location: Location) {
+    this.urlPath = this.location.path();
+    console.log(this.urlPath);
+  }
 }

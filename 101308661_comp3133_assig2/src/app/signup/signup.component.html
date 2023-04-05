@@ -1,47 +1,42 @@
-<section class="vh-100 gradient-custom">
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-        <div class="card bg-light text-black" style="border-radius: 1rem;">
-          <div class="card-body p-5 text-center">
-
-            <div class="mb-md-5 mt-md-4 pb-5">
-
-              <h2 class="fw-bold mb-2 text-uppercase">Sign Up</h2>
-              <!-- [(ngModel)]="firstName" -->
-
-              <div class="form-outline form-black mb-4">
-                <input type="name" id="typeEmailX" [ngClass]="firstName"  class="form-control form-control-lg" required/>
-                <label class="form-label" for="typeT">First Name</label>
-              </div>
-              <div class="form-outline form-black mb-4">
-                  <input type="name" id="typeEmailX" [ngClass]="lastName"  class="form-control form-control-lg" required/>
-                  <label class="form-label" for="typeT">Last Name</label>
-                </div>
-              
-                <div class="form-outline form-black mb-4">
-                  <input type="email" id="typeEmailX"  class="form-control form-control-lg" required/>
-                  <label [ngClass]="email" class="form-label" for="email">Email</label>
-                </div>
-              <div class="form-outline form-black mb-4">
-                <input type="password" id="typePasswordX"  class="form-control form-control-lg" required/>
-                <label ngClass="password" class="form-label" for="typeT">Password</label>
-              </div>
-
-              <p class="small mb-5 pb-lg-2"><a class="text-black-50" href="#!">Forgot password?</a></p>
-
-              <button class="btn btn-outline-dark btn-lg px-5" (click)="handleSignup()"type="submit">Signup</button>
-
-            </div>
-
-            <div>
-              <p class="mb-0">Already have an account? <a routerLink="/login" class="text-black-50 fw-bold">Login Here!</a>
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
+<div
+  class="login-container flex h-5/6 w-3/4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+>
+  <div class="image basis-3/5 self-center">
+    <img src="{{ signupImage }}" alt="signup" />
   </div>
-</section>
+  <div
+    class="inputs flex flex-col items-center justify-around basis-2/5 h-4/5 self-center"
+  >
+    <h1 class="text-3xl font-bold">Login</h1>
+    <span class="text-green-500 italic">{{ success }}</span>
+    <span class="error text-red-600 italic">{{ error }}</span>
+    <input
+      type="text"
+      class="border-b border-purple-400 w-3/4 focus:outline-none"
+      placeholder="Username"
+      [(ngModel)]="username"
+    />
+    <input
+      type="text"
+      class="border-b border-purple-400 w-3/4 focus:outline-none"
+      placeholder="Email"
+      [(ngModel)]="email"
+/>
+    <input
+      type="password"
+      class="border-b border-purple-400 w-3/4 focus:outline-none"
+      placeholder="Password"
+      [(ngModel)]="password"
+    />
+    <button
+      class="p-2 border border-purple-300 bg-purple-300 rounded-md px-4"
+      (click)="signUp()"
+    >
+      Sign Up
+    </button>
+    <p>
+      Already have an account?
+      <a href="/" class="underline"> Login </a>
+    </p>
+  </div>
+</div>

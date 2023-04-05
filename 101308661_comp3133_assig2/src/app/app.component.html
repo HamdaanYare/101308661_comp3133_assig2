@@ -1,2 +1,10 @@
-<app-signup></app-signup>
-<app-login></app-login>
+<div *ngIf="urlPath != '' && urlPath != '/signup'; else elseBlock">
+    <div class="container">
+      <!-- <app-header></app-header>  -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  
+  <ng-template #elseBlock>
+    <router-outlet></router-outlet>
+  </ng-template>
