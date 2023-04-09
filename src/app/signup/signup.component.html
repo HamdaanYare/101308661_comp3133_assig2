@@ -1,0 +1,37 @@
+<section>
+  <div>
+    <div>
+      <div>
+        <div>
+          <div>
+            <div>
+              <h2>Sign Up</h2>
+              <div *ngIf="errorMessage">
+                {{ errorMessage }}
+              </div>
+              <div>
+                <div>
+                  <input type="text" id="username" [(ngModel)]="username" required />
+                  <label for="username">Username</label>
+                </div>
+                <div>
+                  <input type="email" id="email" [(ngModel)]="email" required />
+                  <label for="email">Email</label>
+                </div>
+                <div>
+                  <input type="password" id="password" [(ngModel)]="password" required />
+                  <label for="password">Password</label>
+                </div>
+                <button (click)="handleSignup()" type="submit">Signup</button>
+              </div>
+              <div>
+                <p>Already have an account? <a routerLink="/login">Login Here!</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
